@@ -1,0 +1,31 @@
+/* .Reservation{
+    background-image: url('https://i.pinimg.com/originals/04/aa/07/04aa07eca59d60dea368075fe6c1ddce.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    
+} */
+
+table{
+    margin: auto;
+    margin-top: 100px;
+	width: 1000px;
+	border-collapse: collapse;
+	border: 1px solid ;
+	border-style: solid;
+  }
+
+  table thead th {
+	padding: 8px;
+	background-color: #f57c00;
+	font-size: large;
+
+}
+
+table tbody th{
+    background-color: #ffb74d;
+}
+
+.deleteReservation{
+   background-color: #ffeb3b;
+}
+

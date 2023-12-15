@@ -1,14 +1,19 @@
 const express = require("express");
-//import router
+const db = require ("./database/mysql")
+const router = require ("./routes/routes")
+const cors = require ('cors')
+
 const app = express();
-const PORT = process.env.PORT || 3000
+const PORT =  3100
 
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
-//add api 
+app.use (cors())
+
+
+app.use("/api/hotel", router);
 
 app.listen(PORT, function () {
-  console.log("listening on port 3000!");
+  console.log(`listening on port ${PORT}`);
 });

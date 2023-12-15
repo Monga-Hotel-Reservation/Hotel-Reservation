@@ -1,0 +1,77 @@
+/* body{
+    background-image: url('https://i.pinimg.com/originals/ab/f8/fd/abf8fd309a0cfbe252f2d46d34a298be.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+} */
+
+.oneRoom{
+    display:block;
+    text-align: center;
+}
+
+.onePicture{
+ 
+  width: 400px; 
+  height: 400px; 
+  border-radius: 50%;
+  margin-top: 80px;
+}
+
+.oneName{
+    
+    color: black;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.calendar{
+background-color: rgba(255, 183, 77, 0.8);
+width: 500px;
+  max-width: 100%;
+  margin: 20px auto;
+}
+.select{
+    display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.reservationLabel {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding-left: 90px;
+  }
+
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #69411f;
+    border-radius: 50px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .total{
+    font-size: 40px;
+    font-weight: bolder;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+ 
+  .BookRoom{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 80px;
+    color: #f57c00;
+  }

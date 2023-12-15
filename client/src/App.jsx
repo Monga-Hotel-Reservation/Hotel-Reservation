@@ -1,11 +1,11 @@
+import {React} from 'react';
 
+import User from './User/User.jsx'
 
 function App() {
-  return (
-    <div className="App">
-   Hello
-    </div>
-  );
+  return(
+  <User/>
+  )
 }
 
 export default App;
