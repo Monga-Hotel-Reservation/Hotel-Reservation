@@ -102,19 +102,17 @@ h1 {
   color: #333;
 }
 img {
-  width: 100%; /* Make the image responsive */
+  width: 100%; 
   height: 100%;
-  /* border-radius: 8px; */
-  /* margin-top: 10px; */
+
 }
 
-/* Optional: Add styles for active link */
+
 li.active a {
   color: #ffcc00;
 }
 
 
-/* Create.css */
 
 .create-form {
   max-width: 400px;
@@ -142,7 +140,6 @@ li.active a {
 }
 
 
-/* Rooms.css */
 .rooms-container {
  
   display: grid;
@@ -169,7 +166,7 @@ li.active a {
   border-radius: 4px;
 }
 
-/* One.css */
+
 .one-container {
   background-color: #ffcc0015;
   text-align: center;
