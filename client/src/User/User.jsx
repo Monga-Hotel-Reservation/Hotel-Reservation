@@ -33,6 +33,7 @@ const User = () => {
     }
 
     const showRoom=(newData)=>{
+      console.log(newData)
         navigate(`/${newData.name}`)
         setSelectRoom(newData)
     }
@@ -53,6 +54,7 @@ const User = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
+
                 <Link to="/search" onClick={()=>{search(selectRoom.name)}}>Search</Link>
               </li> 
               <li> 

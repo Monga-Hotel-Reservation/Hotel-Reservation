@@ -6,6 +6,7 @@ const Home=({data, showRoom})=>{
 
    const getOneRoom =(id)=>{
       axios.get(`http://localhost:3100/api/hotel/oneRoom/${id}`).then((res)=>{
+         console.log(res.data)
          showRoom(res.data[0])
       })
       .catch((err)=>{console.log(err)})
@@ -21,7 +22,7 @@ const Home=({data, showRoom})=>{
         {data.map((e,i)=>(
        <div className='HotelList' key={i} >
           <img className='RoomPicture' src={e.image} alt=''/>
-          <h2 className='RoomName'onClick={()=>{getOneRoom(e.rooms_id)}}>{e.name}</h2>  
+          <h2 className='RoomName'onClick={()=>{getOneRoom(e.id)}}>{e.name}</h2>  
        </div>
           ))}        
     </div>
