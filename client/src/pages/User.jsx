@@ -1,14 +1,13 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 
 function User() {
   return (
     <nav>
       <ul>
-        <li><Link to="/" element={<User />}>Home</Link></li>
-        <li><Link to="/rooms">Rooms</Link></li>
-        <li><Link to="/reser">Reservation</Link></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/UserRooms">Rooms</Link></li>
+        <li><Link to="/Login">Log out</Link></li>
       </ul>
     </nav>
   );

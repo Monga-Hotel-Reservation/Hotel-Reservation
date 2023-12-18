@@ -9,7 +9,7 @@ const getAll = (req,res)=>{
     })
 }
 const getOne = (req,res)=>{
-    const sql= `select * from rooms where rooms_id=${req.params.id}`
+    const sql= `select * from rooms where id=${req.params.id}`
     conn.query(sql,(err,result)=>{
         err ? res.send(err) : res.json(result)
     })
@@ -30,13 +30,16 @@ const del = (req, res) => {
 
 
 const update =(req,res)=>{
+  
+    console.log(req.body)
     const sql = `update rooms set ? where id=${req.params.id}`
+  
     conn.query(sql,req.body,(err,result)=>{
         err ? res.send(err) : res.json(result)
     })
-}
+  }
 
-module.exports = {getAll,getOne,add,del,update}
+module.exports = {getAll,add,del,update,getOne}
 
 
 

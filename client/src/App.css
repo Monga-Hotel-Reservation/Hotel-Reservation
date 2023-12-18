@@ -38,15 +38,8 @@ input {
   margin-top: 10px;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-}
-
 nav {
-  background-color: transparent;
+  background-color: rgba(255, 204, 128, 0.5);
   padding: 10px;
 }
 
@@ -64,7 +57,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #240909;
+  color: #0e2038;
   font-weight: bold;
   font-size: 16px;
 }
@@ -89,30 +82,28 @@ button {
   font-size: 16px;
 }
 
-button:hover {
-  background-color: #45a049;
-}
-
 h1 {
   color: #333;
 }
 
 #m1{
   font-size: 24px;
-  color: #333;
+  color: #e65100;
 }
 img {
-  width: 100%; 
+  width: 100%; /* Make the image responsive */
   height: 100%;
-
+  /* border-radius: 8px; */
+  /* margin-top: 10px; */
 }
 
-
+/* Optional: Add styles for active link */
 li.active a {
   color: #ffcc00;
 }
 
 
+/* Create.css */
 
 .create-form {
   max-width: 400px;
@@ -140,6 +131,7 @@ li.active a {
 }
 
 
+/* Rooms.css */
 .rooms-container {
  
   display: grid;
@@ -166,7 +158,7 @@ li.active a {
   border-radius: 4px;
 }
 
-
+/* One.css */
 .one-container {
   background-color: #ffcc0015;
   text-align: center;
@@ -205,4 +197,59 @@ li.active a {
   border: none;
   cursor: pointer;
   margin-top: 20px;
+}
+.phrases {
+  margin: 20px;
+}
+
+.phrase-table {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0.5rem;
+  line-height: 1.5;
+  flex: 1 1 auto;
+  border: 1px solid #d0d0d0;
+}
+
+.phrase-header {
+  display: none;
+  font-weight: 700;
+  font-size: 1.1em;
+  background-color: #f2f2f2;
+}
+
+.phrase-header > .phrase-data {
+  white-space: normal;
+}
+
+.phrase-row {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.phrase-row:nth-of-type(even) {
+  background-color: #f2f2f2;
+}
+
+.phrase-row:nth-of-type(odd) {
+  background-color: #ffffff;
+}
+
+.phrase-row:hover {
+  color: #C0163A;
+}
+
+.phrase-data {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0.5em;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0px;
+  white-space: nowrap;
+  border-bottom: 1px solid #d0d0d0;
 }

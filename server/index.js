@@ -4,7 +4,8 @@ const cookieParser = require("cookie-parser");
 const bcrypt = require("bcrypt");
 const db = require("./database/mysql");
 const Routes2 = require("./routes/routes2");
-const Routes3 = require("./routes/routes3")
+const Routes3 = require("./routes/routes3");
+const Routes4 = require("./routes/reservationRoute")
 const jwt =require("jsonwebtoken")
 const saltRounds = 10;
 
@@ -14,7 +15,7 @@ const port = 5000; // Change the port to 5000
 app.use(express.json());
 app.use(cors({
   origin: ["http://localhost:3000"],
-  methods:["POST","GET","DELETE"],
+  methods:["POST","GET","DELETE","PUT"],
   credentials:true
 }));
 app.use(cookieParser());
@@ -23,6 +24,7 @@ app.use(cookieParser());
 
 app.use("/image",Routes3 );
 app.use("/api/rooms", Routes2);
+app.use("/api/reservation", Routes4);
 
 
 app.get('/getAll',(req,res)=>{
@@ -39,7 +41,7 @@ app.get("/getOne/:id",(req,res)=>{
   })
 })
 app.post('/register', (req, res) => {
-  const sql = "INSERT INTO users (`fullName`, `email`, `password`,`Role`) VALUES (?)";
+  const sql = "INSERT INTO users (`fullName`, `email`, `password`) VALUES (?)";
 
   bcrypt.hash(req.body.password.toString(), saltRounds, (err, hash) => {
     if (err) return res.json({ Error: "Error hashing password" });
@@ -48,7 +50,7 @@ app.post('/register', (req, res) => {
       req.body.fullName,
       req.body.email,
       hash,
-      req.body.Role
+     
     ];
 
     db.query(sql, [values], (err, result) => {

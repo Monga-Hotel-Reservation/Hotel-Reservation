@@ -60,7 +60,8 @@ function Create({setRefresh,refresh}) {
         <button className="form-button" onClick={()=>{
           let obj =({name:name,image:image,type:type,meals:meals,price:price})
           add(obj)
-        }}><Link to="/rooms">Add</Link>   
+        }}>
+          <Link to="/rooms">Add</Link>   
         </button>
       </form>
     </div>

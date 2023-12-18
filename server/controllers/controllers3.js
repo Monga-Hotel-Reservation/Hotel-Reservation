@@ -29,11 +29,13 @@ const del = (req,res)=>{
     })
 }
 
-const update =(req,res)=>{
+const updateImg =(req,res)=>{
     const sql = `update images set ? where id=${req.params.id}`
     conn.query(sql,req.body,(err,result)=>{
         err ? res.send(err) : res.json(result)
     })
 }
 
-module.exports ={getAll, getOne,add,del,update }
+
+
+module.exports ={getAll, getOne,add,del ,updateImg}

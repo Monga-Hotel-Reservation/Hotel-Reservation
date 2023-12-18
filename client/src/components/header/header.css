@@ -1,0 +1,86 @@
+.header{
+    background-color: rgb(243, 195, 135);
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.headerContainer{
+    width: 100%;
+   max-width: 1024px;
+   margin:20px 0px px 0px;
+}
+
+.headerList{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.headerListItem :hover{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: rgb(164, 17, 17);
+    border-radius: 30px;
+    
+}
+
+
+.headerBtn{
+    background-color: rgb(164, 17, 17);
+    color: white;
+    font-weight: 500;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.headerSearch{
+    height: 20px;
+    background-color: rgb(255, 253, 253);
+    border: 3px solid rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px 0px;
+    border: 5px;
+    position: absolute;
+    width:50%;
+    max-width: 500px;
+    color:  rgb(164, 17, 17);
+    margin-left: 530px;
+    padding-left:5px;
+    padding-right:5px;
+    
+
+}
+
+.headerIcon{
+    color: rgb(164, 17, 17);
+}
+
+.headerBtn{
+    background-color:rgb(164, 17, 17);
+    color: white;
+    font-weight: 500;
+}
+
+.headerSearchItem{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.headerSearchInput{
+    border: none;
+    outline: none;
+}
+
+.headerSearchInput::placeholder{
+    color: rgb(164, 17, 17);
+    opacity: 80%;
+}
+
+

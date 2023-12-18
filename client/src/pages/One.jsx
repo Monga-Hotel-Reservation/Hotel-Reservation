@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import Update from "./Update";
+import "./One.css"
 
 function One({setRefresh,refresh}) {
 
@@ -9,22 +10,26 @@ function One({setRefresh,refresh}) {
   const [counter, setCounter] = useState(0);
   const [show, setShow] = useState(false);
   const [image, setImage] = useState([]);
+
+  const [ref, setRef] = useState(false);
   // const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const location = useLocation();
   const room = location.state.room;
+ 
+
 
   useEffect(() => {
     axios
       .get(`http://localhost:5000/image/get/${room.id}`)
       .then((res) => {
-        setRefresh(!refresh)
+      
         setImage(res.data);
         console.log("hna one",res.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [ref]);
 
   const counterImage = () => {
     setCounter((counter) => (counter + 1) % image.length);
@@ -33,37 +38,40 @@ function One({setRefresh,refresh}) {
   const add =(newone)=>{
 axios.post("http://localhost:5000/image/add",newone)
 .then((res) => {
-  setRefresh(!refresh)
   console.log("add",res.data)
+ setRef(!ref)
 }).catch((err)=>{
     console.log(err);
   })
 }
 
   return (
-    <div className="one-container">
-      <h2 className="room-name">{room.name}</h2>
+    <div className="oneRoom">
+      <h2 className="oneName">{room.name}</h2>
       {image.map((el, i) => (
         <div key={i} onClick={counterImage}>
           {i === counter && (
-            <img className="room-image1" src={el.imgURL} />
+            <img className="onePicture" src={el.imgURL} />
           )}
         </div>
       ))}
-      <span className="room-type">Type: {room.type}</span>
-      <p className="room-price">Price: {room.price}</p>
-      <button className="edit-button" onClick={() => setShow(!show)}>
-        Edit
+      <div>
+      <span className="OneType">Type: {room.type}</span>
+      <p className="OnePrice">Price: {room.price}</p>
+      <button className="edit-button" >
+        
+      <Link to="/update"  state={{ room: room }}  >Edit</Link>
       </button>
-      {show && <Update room={room.id} />}
-      <button>
-        <Link to="/rooms">Previous</Link>
-      </button>
+      </div>
+      
+      <div className="add">
       <input type="text" placeholder="new pic" onChange={(e)=>setImg(e.target.value)} />
       <button onClick={()=>{
         let newone=({imgURL:img,rooms_id:room.id})
         add(newone)
       }}>add</button>
+      </div>
+      
     </div>
   );
 }

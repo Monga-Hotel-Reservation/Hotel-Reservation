@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Update from "./Update";
-import One from "./One";
 import axios from "axios";
-
-function Rooms({ data }) {
+import "./room.css"
+  
+function Rooms({ data ,setRefresh,refresh}) {
   const del = (id) => {
     axios
-      .delete(`http://localhost:5000/image/del/${id}`)
+      .delete(`http://localhost:5000/image/del/${id}`)  /// ADMIN
       .then((res) => {
         console.log("images deleted");
       })
@@ -18,6 +17,7 @@ function Rooms({ data }) {
       .delete(`http://localhost:5000/api/rooms/del/${id}`)
       .then((res) => {
         console.log("deleted", res.data);
+        setRefresh(!refresh)
       })
       .catch((err) => {
         console.log(err);
@@ -25,13 +25,18 @@ function Rooms({ data }) {
   };
 
   return (
-    <div className="rooms-container">
+    <div className="HotelCard">
       {data.map((el, i) => (
-        <div key={i} className="room-item">
-          <p className="room-name">{el.name}</p>
-          <img className="room-image" src={el.image} alt="" />
-          <p className="room-name"> {el.type} </p>
-          <p className="room-name">{el.meals}</p>
+        <div key={i} >
+          <div className="HotelList">
+          <p className="RoomName">{el.name}</p>
+          <img className="RoomPicture" src={el.image} alt="" />
+          <p className="RoomName"> {el.type} </p>
+          <p className="RoomName">{el.meals}</p>
+          <Link className="RoomName"  to="/one" state={{ room: el }}>
+            More details
+          </Link>
+          </div>
           <button
             onClick={() => {
               del(el.id);
@@ -39,15 +44,11 @@ function Rooms({ data }) {
           >
             Delete
           </button>
-          <Link to="/one" state={{ room: el }}>
-            More details
-          </Link>
+          
         </div>
       ))}
       <div>
-        <button>
-          <Link to="/">Previous</Link>
-        </button>
+      
       </div>
     </div>
   );
