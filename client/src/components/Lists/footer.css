@@ -1,0 +1,9 @@
+.footerDiv{
+    margin-top: 30px;
+    background-color: rgb(243, 195, 135);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+}

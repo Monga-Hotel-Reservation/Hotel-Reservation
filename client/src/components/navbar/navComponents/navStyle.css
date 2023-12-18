@@ -1,0 +1,110 @@
+
+
+  .schedule-header {
+    background-color: rgb(164, 17, 17);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .flight-row {
+    display: flex;
+    border-bottom: 1px solid rgb(164, 17, 17);
+  }
+
+  .flight-info {
+    flex: 1;
+    padding: 15px;
+    background-color: rgb(243, 195, 135);
+    opacity: 0.8;
+  }
+
+  .flight-time {
+    font-size: 26px;
+    color: rgb(255, 255, 255);
+    
+  }
+
+  .flight-details {
+    margin-top: 10px;
+    font-size: 26px;
+    color: #777;
+  }
+
+  .flight-status {
+    text-align: center;
+    padding: 15px;
+    width: 100px;
+    background-color:rgb(243, 195, 135);
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+  }
+
+
+/*  car rent css */
+
+.contenair{
+  margin:100px 300px 100px 300px
+}
+
+  .car-header {
+    background-color: rgb(164, 17, 17);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .car-option {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .car-info {
+    flex: 1;
+    padding: 15px;
+    background-color: rgb(243, 195, 135);
+    opacity: 0.8;
+  }
+
+  .car-name {
+    font-size: 26px;
+    color: #ffffff;
+  }
+
+  .car-details {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #777;
+  }
+
+  .rent-button {
+    background-color: rgb(243, 195, 135);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .rent-button:hover {
+    background-color: rgb(164, 17, 17);
+  }
+
+  .flightContenair{
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/736/849/78/sunset-sunrise-airport-planes-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .rentalGlobal{
+    background-image: url("https://c.wallhere.com/photos/00/06/Formula_1_Red_Bull_Racing_Max_Verstappen_Honda_vehicle-2068961.jpg!d");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .taxiGlobal{
+    background-image: url("https://c.wallhere.com/photos/5c/9a/anime_anime_girls_Porsche_Porsche_911_hat_long_hair_purple_eyes_car-278151.jpg!d");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }

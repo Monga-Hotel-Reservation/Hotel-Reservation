@@ -1,0 +1,15 @@
+.slide-container{
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.slide-image{   
+   width: 90%;
+}
+
+.slide{
+    background-color: white;
+}
